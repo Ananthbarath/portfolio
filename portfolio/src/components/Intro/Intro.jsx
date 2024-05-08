@@ -9,12 +9,16 @@ import thumbup from '../../img/thumbup.png'
 import Crown from '../../img/crown.png'
 import glassesimoji from '../../img/glassesimoji.png'
 import FloatingDiv from '../FloatingDiv/FloatingDiv'
+import { themeContext } from '../../Context'
+import { useContext } from 'react'
 const Intro = () => {
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
   return (
     <div className="intro">
         <div className="i-left">
             <div className="i-name">
-                <span>Hi! I Am</span>
+                <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
                 <span>Ananth</span>
                 <span>
 "Hello! I'm a full stack developer who loves building websites from start to finish. From designing beautiful interfaces to making sure everything works smoothly behind the scenes, I've got you covered. Take a look around my portfolio and see what I can create for you!"</span>
